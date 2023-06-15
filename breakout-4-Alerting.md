@@ -68,3 +68,33 @@ For conditions enter the following: WHEN last() OF A IS ABOVE 0.1
 
 *Note: if you have a query C/ Threshold, delete that. We only want classic condition*
 
+- Section 3:
+
+Add a new folder, call it TNS **hit enter on keyboard**
+
+In the next section is the eval group. 
+input 30s as your name **hit enter on keyboard**  and change the evaluate every value from 1m to 30s. 
+
+For the purposes of this tutorial, the evaluation interval is intentionally short. This makes it easier to test
+Change the for to be “0m”  
+<img width="741" alt="Screenshot 2023-06-15 at 3 15 25 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/b6ec8355-72ef-42e1-b114-e80b7302b8e2">
+
+- Section 4:
+Feel free to add any free form text.
+
+Additionally, there is the ability to link a dashboard and panel, try adding the workshop dashboard the client panel in the “set dashboard and panel” box. 
+
+<img width="948" alt="Screenshot 2023-06-15 at 3 17 04 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/ae6c7bb3-899b-451e-8558-6bbe25d5e14d">
+
+Scroll to the top and click Save rule & exit
+
+_____
+
+Because we only have one contact point (our email channel), the alert we setup will default to use it. 
+
+As a system grows, admins can use the Notification Policies setting to organize and match alert rules to specific contact points and or route them to Grafana OnCall for on call management. 
+
+**Once you receive the test alert in your email, it is recommended to delete the alert since this is a test and we have set a very low rule evaluation rate.**
+
+<img width="1289" alt="Screenshot 2023-06-15 at 3 19 14 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/002c5adc-0dea-4e5d-8321-ec2edb8cc21a">
+
