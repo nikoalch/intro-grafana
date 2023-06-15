@@ -39,3 +39,58 @@ In the sidebar, hover your cursor over the Home (sandwich) icon, and then click 
 Click on Data sources & Add new data source on the top right
 
 <img width="1296" alt="Screenshot 2023-06-15 at 9 37 04 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/4ec26a74-8e7a-4b14-9249-3063e69cbe75">
+
+Find prometheus and add that
+<img width="1296" alt="Screenshot 2023-06-15 at 9 38 28 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/5068b1d1-7e45-464a-8127-8e9c7dce598f">
+
+For the name box enter:
+```Prometheus-TNS```
+
+In the URL box, enter:
+```https://prometheus.grafana.news```
+
+<img width="1285" alt="Screenshot 2023-06-15 at 9 51 59 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/830cf038-a240-4193-9b66-275e811dca46">
+
+
+Scroll down to the bottom and click save & test. You should see “Successfully queried”
+<img width="1296" alt="Screenshot 2023-06-15 at 9 39 52 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/16a466a0-4000-4f66-945f-914c52b74254">
+
+_____
+
+#### Explore
+Grafana’s dashboard UI is all about building dashboards for visualization. Explore strips away the dashboard and panel options so that you can focus on the query. It helps you iterate until you have a working query and then think about building a dashboard or If you just want to explore your data and do not want to create a dashboard, then Explore makes this much easier. 
+
+From the Sandwich menu or command-palette, go to Explore
+<img width="345" alt="Screenshot 2023-06-15 at 9 42 46 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/f432b731-85fb-4c1b-b799-73a173fd75f9">
+
+Ensure you are on the ```prometheus-tns ``` data source.
+<img width="1292" alt="Screenshot 2023-06-15 at 9 45 57 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/4cd7412e-ec08-4d59-8210-e7230f2bd731">
+
+<img width="220" alt="Screenshot 2023-06-15 at 9 46 46 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/163b7c67-22ec-44fd-b95f-938ae780af23">
+*Note: there are two options available for prometheus in the query field. Builder and code, either option works and has a slightly differnt UI*
+
+
+In the metric drop down find ```tns_request_durations_seconds_count```
+*note: you can leverage auto fill by typing in the metric*
+On the top right hit run query.
+
+<img width="1285" alt="Screenshot 2023-06-15 at 9 50 42 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/be4a696c-e29e-4257-97a1-39d27c401f4d">
+
+Great! We've added our first data source and we confirmed we can query metrics within explore. 
+
+_____
+
+#### Adding a Logging Data source
+
+Repeating the steps above that you used to add the a data source, add another data source with the type “Loki”
+For the name:
+```Loki-TNS```
+
+For the url:
+```https://loki.grafana.news```
+<img width="1285" alt="Screenshot 2023-06-15 at 9 56 39 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/19cac8cb-e82f-45e8-9012-6b96a9b7d198">
+
+
+Scroll down to the bottom and click save & test. You should see “Data source is working”
+
+
