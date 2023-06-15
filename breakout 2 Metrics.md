@@ -112,4 +112,59 @@ You should see this, let's drag the new panel down below to the client row.
 
 ![Kapture 2023-06-15 at 12 24 07](https://github.com/nikoalch/intro-grafana/assets/33036213/150953df-de9e-4ba6-8e0a-ae19b37515d5)
 
+_____
+
+
+Next we'll add the latency for clients. 
+What we'll do is duplicate the latency panel in the app row. Click the menu bar for the panel. 
+Go to More -> Duplicate
+<img width="1286" alt="Screenshot 2023-06-15 at 12 27 07 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/f8f075c4-e47f-4751-a8df-74137a32790f">
+
+That action will duplicate the panel and drop it down in the row. 
+
+<img width="1286" alt="Screenshot 2023-06-15 at 12 28 06 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/ef18985d-9b83-4b57-bebc-caf6ee9266e7">
+
+_____
+
+Let's edit the new panel we just duplicated. 
+You can click on the same panel menu and go to edit, or hover your mouse over the panel and hit the ```e``` key on your keyboard as a shortcut to jump to the panel editor.
+
+You should now be in edit mode, showing you three different queries. 
+Since we're editing a panel that we duplicated, this will help us since we will be only slightly altering the query but expecting the latency output for clients.
+
+For each query we want to ensure they have ```tns_client______``` metrics. 
+For the first query, we want to change the metric name from:
+```histogram_quantile(0.95, sum(rate(tns_request_duration_seconds_bucket[$__rate_interval])) by (le))```
+
+
+To:
+```histogram_quantile(0.95, sum(rate(tns_client_request_duration_seconds_bucket[$__rate_interval])) by (le))```
+
+Second query change to:
+```histogram_quantile(0.95, sum(rate(tns_client_request_duration_seconds_bucket[$__rate_interval])) by (le))```
+
+Third query change to:
+```sum(rate(tns_client_request_duration_seconds_sum[$__rate_interval])) / sum(rate(tns_client_request_duration_seconds_count[$__rate_interval]))```
+<img width="1279" alt="Screenshot 2023-06-15 at 12 33 29 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/f1b966b8-18da-4b02-b0a8-fb88a9120ef2">
+
+
+Click apply on the top right - Save dashboard. 
+
+<img width="1279" alt="Screenshot 2023-06-15 at 12 34 02 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/923eba9e-52b9-4596-b900-4435f75f19a4">
+
+##### Final output:
+
+What we've done is essentially completed a RED style dashboard, which is for these resources show the 
+- Rate (requests per second)
+- Errors (number of requests failing)
+- Duration (the amount of time those requests take)
+
+The RED method is a good proxy to how happy your customers will be. If you’ve got a high error rate, that’s basically going through to your users and they’re getting page load errors. If you’ve got a high duration, your website is slow. So these are really good metrics for building meaningful alerts and measuring your SLA.
+
+Visit ```grafana.news``` to generate traffic
+- Submit links
+- Refresh
+Cause some 500s :) 
+<img width="1279" alt="Screenshot 2023-06-15 at 12 35 49 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/c8a1c899-c8a4-43f4-9153-68887ec3e0ac">
+
 
