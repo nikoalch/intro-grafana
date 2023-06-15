@@ -82,7 +82,7 @@ _____
 
 #### Adding a Logging Data source
 
-Repeating the steps above that you used to add the a data source, add another data source with the type “Loki”
+Repeating the steps above that you used to add the prometheus data source, add another data source with the type “Loki”
 For the name:
 ```Loki-TNS```
 
@@ -93,4 +93,49 @@ For the url:
 
 Scroll down to the bottom and click save & test. You should see “Data source is working”
 
+_____
 
+#### Creating a new Dashboard
+Lets navigate to dashboards and click NEW dashboard.
+<img width="1285" alt="Screenshot 2023-06-15 at 11 22 10 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/ba55e708-b7cc-4e10-b4b4-fe9ff6354c3c">
+
+
+Click add visulization from the main dashboard or the top nav bar. 
+
+<img width="1285" alt="Screenshot 2023-06-15 at 11 22 54 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/a504c459-9abe-4420-aa2e-eaa5e292b273">
+
+
+In the next prompt, use the data source called ```-- Grafana --``` to the right. 
+This is a built-in data source that generates sample data, which is useful when learning how to create Grafana dashboard panels.
+
+<img width="1285" alt="Screenshot 2023-06-15 at 11 24 58 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/20ea2839-920a-4d71-be60-35e069ba0c21">
+
+
+Familiarize yourself with the panel edit menu
+- Notice query tab
+- Data source selector
+- Query A
+- Add another random walk query, Query B
+*Note: you might have to hit refresh to show the data points next to the time range~
+- Notice right hand panel edit, 
+- Try changing title, legend, axis, colors, etc.
+- To change colors click on A-series
+- Change visualization to another(bar chart, etc)
+
+<img width="1285" alt="Screenshot 2023-06-15 at 11 26 51 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/04e2e801-c251-435c-84e4-796dae7a8d26">
+
+- Top right, discard, save, apply.	
+- Save the Dashboard, name it whatever youd like. 
+
+Add another Visualization:
+<img width="1285" alt="Screenshot 2023-06-15 at 11 28 32 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/3ce5f9af-d726-44f1-b251-0ed8c5e6f75e">
+
+Once you've added another panel, add the --grafana-- mixed query, random walk. Save it.
+Play around with the drag and drop via the panel title to reorder or resize as you see fit. 
+- Save dashboard 
+
+### End Hands-on 1
+
+
+
+	
