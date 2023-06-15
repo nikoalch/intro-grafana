@@ -1,6 +1,4 @@
-# intro-grafana
-
-## Breakouts:
+# intro-grafana breakouts:
 
 [Breakout 1: Grafana UI ](breakout-1-Grafana-UI.md)
 
