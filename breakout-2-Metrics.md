@@ -148,7 +148,8 @@ Third query change to:
 <img width="1279" alt="Screenshot 2023-06-15 at 12 33 29 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/f1b966b8-18da-4b02-b0a8-fb88a9120ef2">
 
 
-Click apply on the top right - Save dashboard. 
+Click apply on the top right - Save dashboard.
+*Note: you can add in notes to the updates you made, useful for rolling back or others tracking changes*
 
 <img width="1279" alt="Screenshot 2023-06-15 at 12 34 02 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/923eba9e-52b9-4596-b900-4435f75f19a4">
 
