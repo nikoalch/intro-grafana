@@ -6,3 +6,4 @@
 
 [Breakout 2: Metrics ](breakout-2-Metrics.md)
 
+[Breakout 3: Logs ](breakout-3-Logs.md)
