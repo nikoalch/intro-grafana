@@ -53,6 +53,37 @@ On the top youll have a button that can enable or disable the annotations we jus
 
 Ensure its enabled and in the client QPS panel you should see a line indicating there is an annotation. 
 
-Hover over the annotation line, what do you see?
+Hover over the annotation line:
 ![Kapture 2023-06-15 at 12 54 43](https://github.com/nikoalch/intro-grafana/assets/33036213/7dc9e1e6-f173-48a7-8172-570275b60062)
+
+Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get event description and event tags. The text field can include links to other systems with more detail. in our example we are looking at a specific log stream, grepping for anything with error.
+
+_____
+
+##### Add another visualization for logs
+
+Add a new visualization panel in the dashboard, 
+- Select logs as the visualization 
+- Select: Loki-TNS as the data source
+- Select: ```job=tns_app``` as filter
+- Give the Panel title an appropriate name such as TNS App logs. 
+
+*Note: Naming panels is incredibly important to help give end users context, especially those who may not be familiar with the dashboard/services/etc.* 
+<img width="1278" alt="Screenshot 2023-06-15 at 12 58 10 PM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/9cf27622-0a36-467e-83a4-bb2c4b9a9096">
+
+Drag to the bottom and resize logs panel at the bottom of the dashboard to fit
+
+_____
+
+#### Bonus: Metrics to Logs correlation
+
+- in the App row, go to the QPS panel.
+- select time range of interesting event
+- from the panel menu -> go to explore 
+- from explore split the pane
+- change data source to loki
+- 🎉 just completed metrics to logs correlation for a specific metric to the related log service 
+
+
+![Kapture 2023-06-15 at 13 02 24](https://github.com/nikoalch/intro-grafana/assets/33036213/b72df4cb-11b0-474a-86ae-6448813d3fa5)
 
