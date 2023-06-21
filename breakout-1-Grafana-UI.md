@@ -79,7 +79,7 @@ Ensure you are on the ```prometheus-tns ``` data source.
 *Note: there are two options available for prometheus in the query field. Builder and code, either option works and has a slightly differnt UI*
 
 
-In the metric drop down find ```tns_request_durations_seconds_count```
+In the metric drop down find ```tns_request_duration_seconds_count```
 *note: you can leverage auto fill by typing in the metric*
 On the top right hit run query.
 
