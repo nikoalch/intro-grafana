@@ -54,7 +54,8 @@ For the name box enter:
 In the URL box, enter:
 ```https://prometheus.grafana.news```
 
-<img width="1285" alt="Screenshot 2023-06-15 at 9 51 59 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/830cf038-a240-4193-9b66-275e811dca46">
+
+<img width="1285" alt="Screenshot 2023-06-15 at 9 51 59 AM" src="https://github.com/nikoalch/intro-grafana/assets/33036213/08081d0a-805d-4c59-b110-3f9b070e3a28">
 
 
 Scroll down to the bottom and click save & test. You should see “Successfully queried”
